@@ -6,4 +6,4 @@ __author__ = """Miles Granger"""
 __email__ = 'miles59923@gmail.com'
 __version__ = '0.1.0'
 
-from altitudo.altitudo import altitudo
+from .altitudo import altitudo

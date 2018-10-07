@@ -18,7 +18,7 @@ Python package to find the elevation / altitude at a given geo coordinate.
 
 ### Via CLI
 ```
-altitudo 39.90974 -106.17188
+altitudo -- 39.90974 -106.17188
 2624.0
 ```
 
