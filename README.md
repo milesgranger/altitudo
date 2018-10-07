@@ -3,6 +3,11 @@
 
 Python package to find the elevation / altitude at a given geo coordinate.
 
+[![](https://img.shields.io/pypi/v/altitudo.svg)](https://pypi.python.org/pypi/altitudo) 
+[![](https://img.shields.io/travis/milesgranger/altitudo.svg?branch=master)](https://travis-ci.org/milesgranger/altitudo.svg)
+[![](https://readthedocs.org/projects/altitudo/badge/?version=latest)](https://altitudo.readthedocs.io/en/latest/?badge=latest)
+[![](https://pyup.io/repos/github/milesgranger/altitudo/shield.svg)](https://pyup.io/repos/github/milesgranger/altitudo/)
+
 ## Usage:
 
 ### Via Python:
@@ -23,16 +28,6 @@ altitudo -- 39.90974 -106.17188
 ```
 
 ---
-
-[![](https://img.shields.io/pypi/v/altitudo.svg)](https://pypi.python.org/pypi/altitudo)
-
-[![](https://img.shields.io/travis/milesgranger/altitudo.svg)](https://travis-ci.org/milesgranger/altitudo)
-
-[![](https://readthedocs.org/projects/altitudo/badge/?version=latest)](https://altitudo.readthedocs.io/en/latest/?badge=latest)
-
-
-[![](https://pyup.io/repos/github/milesgranger/altitudo/shield.svg)](https://pyup.io/repos/github/milesgranger/altitudo/)
-
 
 
 Package to get elevation / altitude from a given geo coordinate
