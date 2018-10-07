@@ -7,11 +7,8 @@ python:
   - 3.4
   - 2.7
 
-# Command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
-install: pip install -U tox-travis
-
 # Command to run tests, e.g. python setup.py test
-script: tox
+script: python setup.py test
 
 # Assuming you have installed the travis-ci CLI tool, after you
 # create the Github repo and add it to Travis, run the
@@ -22,7 +19,7 @@ deploy:
   distributions: sdist bdist_wheel
   user: milesg
   password:
-    secure: PLEASE_REPLACE_ME
+    secure: H6ceDixl2SXJTUC5k00Cg8irl1k3iFQmFqCrTcHC00L4GupQgT47asPOIAaQxAfXK1k1YvjJuko4iliiuy7gCPROlicnEdqQWIbOl5R0NABaVf7ifGZE/q51Qcay+t62UDK3k574MxJwdY+tVJS5AiIF1NWGtBtQNXJs2EDwCQk/z62ERWKAbDaG6/NfikyuQlLxps5fmffBy4kMnm3JtURW3SKf8LEN55yRffIs8GzqygjoMdvGfMlNRj629QRhv+hcoc8mgswqbcqCKY1BxB3l7HW0kQdDAICmxa5fk5BeV/7rgt5m2Kd6bBooHCEXXZ0obP2YqzBG1OysCPbiUhVqpqaFat2tFpSLOby18O0ASvJXHr5D6B+8fjXQXoWBCpBhHZ1E5eqfPu76q34rwM+IXC7SVdAueHLYVrA0dc5SZu5M1K/ZEIqwZ8o+kS2HEaXZsexRfdpj6VHCU3T4curr7W5DzUOweUlU3wn0hgPE9ycdk/dJ5vEsoZDwz+HN6w+2q6ImZuZzPIGqm/uajyQ1eApSIAE08y8PgCJXLBdAbPYNyox8eQWPhMVGsB18wV4DIIIukqNNIQ0T/SMNMExJ7uFo+bSLa63810FtExmzipoQC1ZcSGsYeb71xz5PzyPPSGEtmBmFK1g/qy3tH12/NVh9KWVpWGE9h75gfto=
   on:
     tags: true
     repo: milesgranger/altitudo
