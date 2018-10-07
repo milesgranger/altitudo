@@ -5,13 +5,13 @@
 
 from setuptools import setup, find_packages
 
-with open('README.rst') as readme_file:
+with open('README.md') as readme_file:
     readme = readme_file.read()
 
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = ['Click>=6.0', ]
+requirements = ['Click>=6.0', 'requests>=2.0']
 
 setup_requirements = ['pytest-runner', ]
 
@@ -21,7 +21,7 @@ setup(
     author="Miles Granger",
     author_email='miles59923@gmail.com',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
@@ -40,10 +40,10 @@ setup(
         ],
     },
     install_requires=requirements,
-    license="MIT license",
+    license="The Unlicense",
     long_description=readme + '\n\n' + history,
     include_package_data=True,
-    keywords='altitudo',
+    keywords='altitudo,elevation,altitude',
     name='altitudo',
     packages=find_packages(include=['altitudo']),
     setup_requires=setup_requirements,

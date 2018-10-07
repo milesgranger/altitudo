@@ -6,33 +6,33 @@
 import pytest
 
 from click.testing import CliRunner
-
-from altitudo import altitudo
-from altitudo import cli
-
-
-@pytest.fixture
-def response():
-    """Sample pytest fixture.
-
-    See more at: http://doc.pytest.org/en/latest/fixture.html
-    """
-    # import requests
-    # return requests.get('https://github.com/audreyr/cookiecutter-pypackage')
-
-
-def test_content(response):
-    """Sample pytest test function with the pytest fixture as an argument."""
-    # from bs4 import BeautifulSoup
-    # assert 'GitHub' in BeautifulSoup(response.content).title.string
+from altitudo import cli, altitudo
 
 
 def test_command_line_interface():
     """Test the CLI."""
     runner = CliRunner()
-    result = runner.invoke(cli.main)
+    result = runner.invoke(cli.main, ['--', 39.90974, -106.17188])
+    print(result.output)
     assert result.exit_code == 0
-    assert 'altitudo.cli.main' in result.output
+    assert '2624.0\n' == result.output
     help_result = runner.invoke(cli.main, ['--help'])
     assert help_result.exit_code == 0
-    assert '--help  Show this message and exit.' in help_result.output
+    assert 'Usage: altitudo [OPTIONS] LAT LON' in help_result.output
+
+def test_altitudo_single_coordinate():
+    """Test a single coordinate"""
+    elevation = altitudo(lat=39.90974, lon=-106.17188)
+    assert isinstance(elevation, float)
+
+def test_altitudo_multi_coordinates():
+    elevations = altitudo(lat=[39.90974, 39.90974], lon=[-106.17188, -106.17188])
+    assert isinstance(elevations, list)
+    assert isinstance(elevations[0], dict)
+    assert len(elevations) == 2
+
+def test_altitudo_convert_feet():
+    elevation = altitudo(lat=39.90974, lon=-106.17188)
+    assert elevation == 2624.0
+    elevation = altitudo(lat=39.90974, lon=-106.17188, feet=True)
+    assert elevation == 2624.0 * 3.28084

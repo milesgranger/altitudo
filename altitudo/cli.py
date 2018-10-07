@@ -4,13 +4,17 @@
 import sys
 import click
 
+from altitudo import altitudo
 
-@click.command()
-def main(args=None):
+
+@click.command('altitudo')
+@click.argument('lat', type=click.FLOAT)
+@click.argument('lon', type=click.FLOAT)
+@click.option('--feet', default=False)
+def main(lat, lon, feet=False):
     """Console script for altitudo."""
-    click.echo("Replace this message by putting your code into "
-               "altitudo.cli.main")
-    click.echo("See click documentation at http://click.pocoo.org/")
+    elevation = altitudo(lat, lon, feet)
+    click.echo(elevation)
     return 0
 
 
