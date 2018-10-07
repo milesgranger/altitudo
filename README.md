@@ -4,7 +4,7 @@
 Python package to find the elevation / altitude at a given geo coordinate.
 
 [![](https://img.shields.io/pypi/v/altitudo.svg)](https://pypi.python.org/pypi/altitudo) 
-[![](https://img.shields.io/travis/milesgranger/altitudo.svg?branch=master)](https://travis-ci.com/milesgranger/altitudo)
+[![](https://travis-ci.com/milesgranger/altitudo.svg?branch=master)](https://travis-ci.com/milesgranger/altitudo)
 [![](https://readthedocs.org/projects/altitudo/badge/?version=latest)](https://altitudo.readthedocs.io/en/latest/?badge=latest)
 [![](https://pyup.io/repos/github/milesgranger/altitudo/shield.svg)](https://pyup.io/repos/github/milesgranger/altitudo/)
 
@@ -29,6 +29,15 @@ altitudo -- 39.90974 -106.17188
 
 ---
 
+### Install:
+
+```pip install --upgrade altitudo```
+
+### Uninstall:
+```pip uninstall altitudo```
+
+
+---
 
 Package to get elevation / altitude from a given geo coordinate
 
