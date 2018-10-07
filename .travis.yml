@@ -1,24 +1,15 @@
-# Config file for automatic testing at travis-ci.org
-
 language: python
 python:
-  - 3.6
-  - 3.5
-  - 3.4
-
-# Command to run tests, e.g. python setup.py test
+- 3.6
+- 3.5
+- 3.4
 script: python setup.py test
-
-# Assuming you have installed the travis-ci CLI tool, after you
-# create the Github repo and add it to Travis, run the
-# following command to finish PyPI deployment setup:
-# $ travis encrypt --add deploy.password
 deploy:
   provider: pypi
   distributions: sdist bdist_wheel
   user: milesg
   password:
-    secure: H6ceDixl2SXJTUC5k00Cg8irl1k3iFQmFqCrTcHC00L4GupQgT47asPOIAaQxAfXK1k1YvjJuko4iliiuy7gCPROlicnEdqQWIbOl5R0NABaVf7ifGZE/q51Qcay+t62UDK3k574MxJwdY+tVJS5AiIF1NWGtBtQNXJs2EDwCQk/z62ERWKAbDaG6/NfikyuQlLxps5fmffBy4kMnm3JtURW3SKf8LEN55yRffIs8GzqygjoMdvGfMlNRj629QRhv+hcoc8mgswqbcqCKY1BxB3l7HW0kQdDAICmxa5fk5BeV/7rgt5m2Kd6bBooHCEXXZ0obP2YqzBG1OysCPbiUhVqpqaFat2tFpSLOby18O0ASvJXHr5D6B+8fjXQXoWBCpBhHZ1E5eqfPu76q34rwM+IXC7SVdAueHLYVrA0dc5SZu5M1K/ZEIqwZ8o+kS2HEaXZsexRfdpj6VHCU3T4curr7W5DzUOweUlU3wn0hgPE9ycdk/dJ5vEsoZDwz+HN6w+2q6ImZuZzPIGqm/uajyQ1eApSIAE08y8PgCJXLBdAbPYNyox8eQWPhMVGsB18wV4DIIIukqNNIQ0T/SMNMExJ7uFo+bSLa63810FtExmzipoQC1ZcSGsYeb71xz5PzyPPSGEtmBmFK1g/qy3tH12/NVh9KWVpWGE9h75gfto=
+    secure: hgyHMIWZebYda6k8JtQN4jePLE7Qt9kdJ2S8rFzQJP8QIGD+ysmFOonG15YbDzH/HbrmTrfTkkzYe8jqPtAr7GQvsGi6l+2dvE4zkzJCjGvDl9mt5IjPRKMSri8KClCVoFNgwFxOt+10Z08fF5/INPOuxD2pN2Zx2hXw2Vpx4xdhACIQaEu0x8sXEQTMUO1fBrKLOT3OsewJmFH07xJ+Ot+Xf3xZxxWw5C5NaSgjbi1+oJ+JyKX3KJ1SjByrUdJSM01qPTE1jhP8rm3Lw01tHxS58V+CeRUS3miFcl2HbvYCF2eOEjeAkK0Rb8XkHvB9T6IihqlcpMTlUVVvOTLuEV/dp0gBilIw25JsqPGIpXGV+ifDpUWDg8cG1JQ9s61+5dNTTjOmze7Azc6R6lPdKop+GBfk8YbKAPqDt151Nj5J13DYJWU475w/2IhJY0NszA/OJK94b7l4bAU70VUDQkCLDRQa65+U5HqfsCar2neVlR4IbU/j75Qe0b7GFBwP5cmmMsJaUeE7RPGBudQJSvTLBE4p4hZKR0ZGQZieGB2IFS0ooHIn0x+fo46ON2sFjidpoIKLEHUOXAjqeTF5/q2+M1Nvpzps7agThTM74Yg2XDH8a16iTXMfNipLvtapTuB2xavYx1bRmjurzrOvedko4mPGkhr0f4mpE6V/qEg=
   on:
     tags: true
     repo: milesgranger/altitudo
