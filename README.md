@@ -9,9 +9,9 @@ Python package to find the elevation / altitude at a given geo coordinate.
 [![](https://pyup.io/repos/github/milesgranger/altitudo/shield.svg)](https://pyup.io/repos/github/milesgranger/altitudo/)
 
 
-# PLEASE NOTE:
+## PLEASE NOTE:
 
-### This package is backed by a [service](https://elevation-api.io) which costs _real_ money. In order to keep your application running smoothly, consider making a donation [via DonorBox here](https://donorbox.org/elevation-api)
+### This package is backed by a [service](https://elevation-api.io) which offers free elevations for 1 kilometer, but also higher resolution (90m & 30m) for paid members. This package uses the free service, 1 kilometer resolutions.
 
 ---
 
