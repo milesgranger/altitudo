@@ -15,7 +15,7 @@ def test_command_line_interface():
     result = runner.invoke(cli.main, ['--', 39.90974, -106.17188])
     print(result.output)
     assert result.exit_code == 0
-    assert '2624.0\n' == result.output
+    assert '2607.0\n' == result.output
     help_result = runner.invoke(cli.main, ['--help'])
     assert help_result.exit_code == 0
     assert 'Usage: altitudo [OPTIONS] LAT LON' in help_result.output
@@ -33,6 +33,6 @@ def test_altitudo_multi_coordinates():
 
 def test_altitudo_convert_feet():
     elevation = altitudo(lat=39.90974, lon=-106.17188)
-    assert elevation == 2624.0
+    assert elevation == 2607.0
     elevation = altitudo(lat=39.90974, lon=-106.17188, feet=True)
-    assert elevation == 2624.0 * 3.28084
+    assert elevation == 2607.0 * 3.28084
